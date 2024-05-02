@@ -1,2 +1,2 @@
 // src/index.ts
-export { logError, handleError } from '~/utils/errorLogging';
+export { logError, handleError } from './utils/errorLogging';
