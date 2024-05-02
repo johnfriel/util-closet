@@ -1,1 +1,1 @@
-export { logError, handleError } from './utils/errorLogging';
+export { logError, handleError } from './utils/errorLogging.js';
