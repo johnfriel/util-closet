@@ -1,9 +1,8 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
-import { logError } from "~/utils/errorLogging";
 export function GoogleTagInitialization(props) {
     const { gaTrackingId } = props;
     if (!gaTrackingId) {
-        logError('GoogleTagInitialization.tsx: gaTrackingId is required', '<GoogleTagInitialization>');
+        console.error('GoogleTagInitialization.tsx: gaTrackingId is required');
         return null;
     }
     else {

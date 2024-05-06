@@ -1,12 +1,9 @@
-import { logError } from "~/utils/errorLogging";
-
 export function GoogleTagInitialization(props: { gaTrackingId: string }) {
   const { gaTrackingId } = props;
 
   if (!gaTrackingId) {
-    logError(
+    console.error(
       'GoogleTagInitialization.tsx: gaTrackingId is required',
-      '<GoogleTagInitialization>',
     );
     return null;
   } else {

@@ -2,7 +2,7 @@
 ////////////////
 // COMPONENTS //
 // REMIX
-export { GoogleTagInitialization } from './remix/google-analytics/GoogleTagInitialization.jsx';
+export { GoogleTagInitialization } from './remix/google-analytics/GoogleTagInitialization.js';
 export { googleAnalyticsPageView, googleAnalyticsEvent } from './remix/google-analytics/googleAnalytics.client.js';
 // UTILS
 export { logError, handleError } from './utils/errorLogging.js';
