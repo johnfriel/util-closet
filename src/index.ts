@@ -1,5 +1,11 @@
 // src/index.ts
 
+////////////////
+// COMPONENTS //
+
+// REMIX
+export { GoogleTagInitialization } from './remix/google-analytics/GoogleTagInitialization.jsx';
+
 // UTILS
 export { logError, handleError } from './utils/errorLogging.js';
 
