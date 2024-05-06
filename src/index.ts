@@ -5,6 +5,7 @@
 
 // REMIX
 export { GoogleTagInitialization } from './remix/google-analytics/GoogleTagInitialization.jsx';
+import { googleAnalyticsPageView, googleAnalyticsEvent } from './remix/google-analytics/googleAnalytics.client.js';
 
 // UTILS
 export { logError, handleError } from './utils/errorLogging.js';
