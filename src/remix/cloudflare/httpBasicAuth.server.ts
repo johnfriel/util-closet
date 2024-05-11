@@ -1,9 +1,6 @@
 import { AppLoadContext } from '@remix-run/cloudflare'
 
-export const basicAuthHeaders = {
-  "WWW-Authenticate": "Basic realm=\"Staging environment for staff only\", charset=\"UTF-8\"",
-};
-
+// Defining the interface for the environment variables
 interface Env {
   BASIC_AUTH_USER: string;
   BASIC_AUTH_PASS: string;
@@ -11,6 +8,17 @@ interface Env {
 function isEnv(env: any): env is Env {
   return env.BASIC_AUTH_USER && env.BASIC_AUTH_PASS;
 }
+declare module '@remix-run/cloudflare' {
+  interface AppLoadContext {
+    cloudflare: {
+      env: Env
+    };
+  }
+}
+
+export const basicAuthHeaders = {
+  "WWW-Authenticate": "Basic realm=\"Staging environment for staff only\", charset=\"UTF-8\"",
+};
 
 // Use TextEncoder and Web Crypto API to perform a timing-safe comparison
 async function timingSafeEqual(a: string, b: string): Promise<boolean> {
